@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
+	<name>SpringLegacy-</name>
+=======
 	<name>Spring-Legacy-</name>
+>>>>>>> branch 'homework' of https://github.com/Lian-OwO/SpringLegacy-.git
 	<comment></comment>
 	<projects>
 	</projects>
