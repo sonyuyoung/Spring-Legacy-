@@ -1,10 +1,10 @@
 package com.spring.kmk0906;
 
-public class KMKTest {
+public class KMKTest2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("test 김민경");
+		System.out.println("김민경2");
 	}
 
 }
