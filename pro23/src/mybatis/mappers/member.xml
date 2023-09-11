@@ -30,12 +30,13 @@
 
 <!-- sql의 문장을 따로 분리해서, id로 호출하면, 원하는 결과를 얻는다. 
 타입도 지정가능.  -->
+<!-- 원본 -->
 	<select id="selectAllMemberList" resultMap="memResult">
       <![CDATA[
          select * from t_member	order by joinDate desc	 	
       ]]>
 	</select>
-	<!-- 과제용 -->
+	<!-- 과제 -->
 		<select id="selectAllMemberList2" resultMap="memResult">
       <![CDATA[
          select * from t_member 	
