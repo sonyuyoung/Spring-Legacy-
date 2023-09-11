@@ -25,10 +25,11 @@ public class MemberServlet extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 		//String name = dao.selectName();
 		int pwd = dao.selectPwd();
+		String name = dao.selectName();
 		PrintWriter pw = response.getWriter();
 		pw.write("<script>");
-		//pw.write("alert(' �̸�: " + name +"');");
-		pw.write("alert(' ��й�ȣ : "+ pwd+"');");
+		pw.write("alert(' 이름: " + name +"');");
+		pw.write("alert(' 비밀번호ȣ : "+ pwd+"');");
 		pw.write("</script>");
 
 	}
