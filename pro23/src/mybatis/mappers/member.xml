@@ -36,26 +36,12 @@
          select * from t_member	order by joinDate desc	 	
       ]]>
 	</select>
-	<!-- 과제 -->
-		<select id="selectAllMemberList2" resultMap="memResult">
+	<!-- 과제0907 -->
+	<select id="selectAllMemberList2" resultMap="memResult">
       <![CDATA[
          select * from t_member 	
       ]]>
 	</select>
-
-	<select id="selectName" resultType="String">
-    <![CDATA[
-	select name from t_member
-	where id = 'hong'			
-    ]]>
-	</select>
-	
-	<select id="selectPwd" resultType="int" >
-	  <![CDATA[ 
-	    select pwd from t_member 
-	    where id = 'hong'
-	 ]]>
-	 </select> 
 	 
 	<select id="selectMemberById" resultType="memberVO"  parameterType="String" >
       <![CDATA[
@@ -72,6 +58,23 @@
          pwd = #{pwd}			
       ]]>
     </select>
+    
+   <!--  손주원 0911 실습과제
+    <select id="selectMemberByName" resultMap="memResult"  parameterType="String" >
+      <![CDATA[
+         select * from t_member
+         where
+         name = #{name}			
+      ]]>
+    </select>
+    
+    <select id="selectMemberByEmail" resultMap="memResult"  parameterType="String" >
+      <![CDATA[
+         select * from t_member
+         where
+         email = #{email}			
+      ]]>
+    </select> -->
     
      <insert id="insertMember"  parameterType="memberVO">
 		<![CDATA[

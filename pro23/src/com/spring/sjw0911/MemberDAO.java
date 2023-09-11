@@ -33,13 +33,42 @@ public class MemberDAO {
 		memlist = session.selectList("mapper.member.selectAllMemberList");
 		return memlist;
 	}
-	//과제
-		public List<MemberVO> selectAllMemberList2() {
+	//과제0907
+	/*
+	 * public List<MemberVO> selectAllMemberList2() { sqlMapper = getInstance();
+	 * SqlSession session = sqlMapper.openSession(); List<MemberVO> memlist = null;
+	 * memlist = session.selectList("mapper.member.selectAllMemberList2"); return
+	 * memlist; }
+	 */
+		
+		public MemberVO selectMemberById(String id){
+		      sqlMapper=getInstance();
+		      SqlSession session=sqlMapper.openSession();
+		      MemberVO memberVO=session.selectOne("mapper.member.selectMemberById",id);
+		      return memberVO;		
+		   }
+
+		public List<MemberVO> selectMemberByPwd(int pwd) {
+		sqlMapper = getInstance();
+		SqlSession session = sqlMapper.openSession();
+		List<MemberVO> membersList = null;
+		membersList= session.selectList("mapper.member.selectMemberByPwd", pwd);
+		return membersList;
+		}
+		//과제0911
+		public List<MemberVO> selectMemberByName(String name) {
 			sqlMapper = getInstance();
 			SqlSession session = sqlMapper.openSession();
-			List<MemberVO> memlist = null;
-			memlist = session.selectList("mapper.member.selectAllMemberList2");
-			return memlist;
+			List<MemberVO> membersList = null;
+			membersList= session.selectList("mapper.member.selectMemberByName", name);
+			return membersList;
+		}
+		public List<MemberVO> selectMemberByEmail(String email) {
+			sqlMapper = getInstance();
+			SqlSession session = sqlMapper.openSession();
+			List<MemberVO> membersList = null;
+			membersList= session.selectList("mapper.member.selectMemberByEmail", email);
+			return membersList;
 		}
 	
 
