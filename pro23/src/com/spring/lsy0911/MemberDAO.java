@@ -44,6 +44,21 @@ public class MemberDAO {
 		return memlist;
 	}
 	
+	
+	//과제 
+	public List<MemberVO> selectAllMemberList2() {
+		//getInstance() 위에서 정의한, 디비에 연결하기 위한 인스턴스(수납도구)
+		sqlMapper = getInstance();
+		// session -> sql 문장을 이용해서, db 조작을 위한 인스턴스 
+		SqlSession session = sqlMapper.openSession();
+		// 임시로 담을 리스트형의 인스턴스 
+		List<MemberVO> memlist = null;
+		// 실제, 디비에서 , 데이터를 가지고 와서 담을 변수. -- 실제 작업. 
+		memlist = session.selectList("mapper.member.selectAllMemberList2");
+		return memlist;
+	}
+	
+	
 //	 public List<HashMap<String, String>> selectAllMemberList() { 
 //		sqlMapper = getInstance(); 
 //     	SqlSession session = sqlMapper.openSession();

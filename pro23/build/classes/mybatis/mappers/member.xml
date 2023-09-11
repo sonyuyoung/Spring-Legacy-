@@ -35,6 +35,12 @@
          select * from t_member	order by joinDate desc	 	
       ]]>
 	</select>
+	<!-- 과제용 -->
+		<select id="selectAllMemberList2" resultMap="memResult">
+      <![CDATA[
+         select * from t_member 	
+      ]]>
+	</select>
 
 	<select id="selectName" resultType="String">
     <![CDATA[

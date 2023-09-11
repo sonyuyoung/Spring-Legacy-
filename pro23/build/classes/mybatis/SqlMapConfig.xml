@@ -8,7 +8,10 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
    <!-- 사용하는 용도가 : 스프링 프레임워크디비(오라클) -->
    <!-- 데이터의 결과를 한번에 담는 모델 클래스  -->
    <!-- 양방향, 백에서 특정의 조건을 모델 클래스에 담아서 전달도 함 -->
-      <typeAlias type="com.spring.ex01.MemberVO" alias="memberVO"/>
+   <!-- 원본 -->
+      <!-- <typeAlias type="com.spring.ex01.MemberVO" alias="memberVO"/> -->
+      <!-- 과제 -->
+      <typeAlias type="com.spring.lsy0911.MemberVO" alias="memberVO"/>
    </typeAliases>
 
 <!-- 디비에 연결을 위한 기본 설정 -->
@@ -28,6 +31,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 <!-- 실제, 마이바티스 장점이 sql 문장을 코드와 분리를 해서 관리하는 부분. -->
 <!-- sql 문장을 모아둔 설정 파일 -->
 <mappers>
+<!-- 원본, 과제 용 조회하는 sql 하나 추가해서 사용할 예정.  -->
    <mapper resource="mybatis/mappers/member.xml"/>
 </mappers>
 </configuration>
