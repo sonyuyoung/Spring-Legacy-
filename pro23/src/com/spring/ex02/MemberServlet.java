@@ -20,16 +20,20 @@ public class MemberServlet extends HttpServlet {
 	}
 
 	private void doHandle(HttpServletRequest request, HttpServletResponse response)	throws  ServletException, IOException {
+		System.out.println("순서2 : doHandle 메서드 호출");
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		MemberDAO dao = new MemberDAO();
 		//String name = dao.selectName();
 		int pwd = dao.selectPwd();
 		String name = dao.selectName();
+		String testDate = dao.selectDate();
 		PrintWriter pw = response.getWriter();
+		
 		pw.write("<script>");
 		pw.write("alert(' 이름: " + name +"');");
-		pw.write("alert(' 비밀번호ȣ : "+ pwd+"');");
+		pw.write("alert(' 비밀번호 : "+ pwd+"');");
+		pw.write("alert(' 등록일 : "+ testDate+"');");
 		pw.write("</script>");
 
 	}
