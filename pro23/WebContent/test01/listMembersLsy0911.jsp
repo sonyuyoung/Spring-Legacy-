@@ -22,11 +22,15 @@
       <td><b>이메일</b></td>
    </tr>
    
+   		<!-- List<MemberVO> membersList2 = dao.selectAllMemberList2();
+   		한 요소들이 각각 멤버의 정보를 담은 인스턴스들의 모음집
+   		 -->
+   		 <!-- 각 리스트의 요소를 하나씩 꺼내서 반복 처리하는 부분 -->
  <c:forEach var="member" items="${membersList2}" >     
    <tr align="center">
       <td>${member.id}</td>
       <td>${member.pwd}</td>
-      <td>${member.email}</td>      
+      <td>${member.email}</td>
     </tr>
   </c:forEach>   
 </table>
