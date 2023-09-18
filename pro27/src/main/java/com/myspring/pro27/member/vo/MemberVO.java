@@ -11,16 +11,18 @@ public class MemberVO {
 	private String name;
 	private String email;
 	private Date joinDate;
+	private String imageFileName;
 
 	public MemberVO() {
 		
 	}
 
-	public MemberVO(String id, String pwd, String name, String email) {
+	public MemberVO(String id, String pwd, String name, String email,String imageFileName) {
 		this.id = id;
 		this.pwd = pwd;
 		this.name = name;
 		this.email = email;
+		this.imageFileName = imageFileName;
 	}
 
 	public String getId() {
@@ -63,4 +65,13 @@ public class MemberVO {
 		this.joinDate = joinDate;
 	}
 
+	public String getImageFileName() {
+		return imageFileName;
+	}
+
+	public void setImageFileName(String imageFileName) {
+		this.imageFileName = imageFileName;
+	}
+
+	
 }

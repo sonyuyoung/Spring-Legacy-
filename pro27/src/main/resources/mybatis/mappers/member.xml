@@ -14,6 +14,7 @@
         <result property="name" column="name" />
         <result property="email" column="email" />
         <result property="joinDate" column="joinDate" />
+        <result property="imageFileName" column="imageFileName" />
 	</resultMap> 
 	<!-- 
 	<resultMap id="memResult" type="java.util.HashMap">
@@ -61,29 +62,37 @@
          pwd = #{pwd}			
       ]]>
     </select>
+	<!-- <select id="selectMemberByimage" resultMap="memResult"  parameterType="int" >
+      <![CDATA[
+         select * from t_member
+         where
+         imageFileName = #{imageFileName}			
+      ]]>
+    </select> -->
     
      <insert id="insertMember"  parameterType="memberVO">
 		<![CDATA[
-		 insert into t_member(id,pwd, name, email, joinDate)
-		 values(#{id}, #{pwd}, #{name}, #{email}, sysdate)
+		 insert into t_member(id,pwd, name, email, joinDate, imageFileName)
+		 values(#{id}, #{pwd}, #{name}, #{email}, sysdate, #{imageFileName})
 		]]>      
 	</insert>
 	
 	<insert id="insertMember2"  parameterType="java.util.HashMap">
 		<![CDATA[
-			 insert into t_member(id,pwd, name, email)
-			 values(#{id}, #{pwd}, #{name}, #{email})
+			 insert into t_member(id,pwd, name, email,imageFileName)
+			 values(#{id}, #{pwd}, #{name}, #{email} , #{imageFileName})
 		]]>      
    </insert>
    
    <update id="updateMember"  parameterType="memberVO">
      <![CDATA[
 	     update t_member
-	     set pwd=#{pwd}, name=#{name}, email=#{email}
+	     set pwd=#{pwd}, name=#{name}, email=#{email}, imageFileName= #{imageFileName}
 	     where
 	     id=#{id}
       ]]>      
    </update> 
+
      
    <delete id="deleteMember"  parameterType="String">
 	<![CDATA[
@@ -92,6 +101,8 @@
 	   id=#{id}
 	]]>      
   </delete>
+     
+   
 	
 	
 	<!-- 동적 SQL문 -->
@@ -156,11 +167,12 @@
    
    <insert id="foreachInsert"  parameterType="java.util.Map">
       <foreach item="item"  collection="list"   open="INSERT ALL" separator=" " close="SELECT * FROM DUAL" >
-          INTO  t_member(id, pwd, name, email)
+          INTO  t_member(id, pwd, name, email,imageFileName)
           VALUES  (#{item.id},
                     #{item.pwd},
                     #{item.name},
                     #{item.email})
+                    #{item.imageFileName})
       </foreach>
    </insert>
    

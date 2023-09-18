@@ -30,15 +30,20 @@
       <put-attribute name="title" value="로그인창" />
       <put-attribute name="body" value="/WEB-INF/views/member/loginForm.jsp" />
    </definition>
-      
-<!-- 
+
    <definition name="/member/memberForm" extends="baseLayout">
       <put-attribute name="title" value="회원등록창" />
       <put-attribute name="body" value="/WEB-INF/views/member/memberForm.jsp" />
    </definition>
-
-   <definition name="/member/viewDetail" extends="baseLayout">
+   
+   <definition name="/member/modMember" extends="baseLayout">
+      <put-attribute name="title" value="회원수정창" />
+      <put-attribute name="body" value="/WEB-INF/views/member/modMember.jsp" />
+   </definition>
+<!-- 
+  <definition name="/member/viewDetail" extends="baseLayout">
       <put-attribute name="title" value="회원상세창" />
       <put-attribute name="body" value="/WEB-INF/views/member/viewDetail.jsp" />
-   </definition> -->
+   </definition>   -->
+   
 </tiles-definitions>

@@ -21,7 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class FileUploadController  {
 	// 임시 이미지 파일 (물리 저장소) 
-	private static final String CURR_IMAGE_REPO_PATH = "c:\\spring\\image_repo";
+	private static final String CURR_IMAGE_REPO_PATH = "/Users/u020/upload/";
 	// 파일 이미지를 업로드 하기위한 창
 	@RequestMapping(value="/form")
 	public String form() {

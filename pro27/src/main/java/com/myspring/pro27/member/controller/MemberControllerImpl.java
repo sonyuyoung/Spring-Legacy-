@@ -70,6 +70,31 @@ public class MemberControllerImpl   implements MemberController {
 		ModelAndView mav = new ModelAndView("redirect:/member/listMembers.do");
 		return mav;
 	}
+	
+//	@Override
+//	@RequestMapping(value="/member/viewDetail.do" ,method = RequestMethod.GET)
+//	public ModelAndView viewDetail(@ModelAttribute("member") MemberVO member,HttpServletRequest request, HttpServletResponse response) throws Exception {		
+//	
+//		  member.setId("사용자 아이디"); // 사용자 아이디 설정
+//
+//		    ModelAndView mav = new ModelAndView("memberDetail"); // 뷰 이름 설정
+//
+//		    // 회원 정보 조회 (memberService.login 대신 사용)
+//		    MemberVO memberVO = memberService.getMemberByUserId(member.getUserId());
+//
+//		    if (memberVO != null) {
+//		        // 조회된 회원 정보를 모델에 추가
+//		        mav.addObject("member", memberVO);
+//		    } else {
+//		        // 회원 정보가 없는 경우 오류 페이지로 리디렉션 또는 처리
+//		        mav.setViewName("errorPage"); /s/ 오류 페이지로 리디렉션
+//		    }
+//
+//		    return mav;
+//		}
+//		  
+//		}
+
 	/*
 	@RequestMapping(value = { "/member/loginForm.do", "/member/memberForm.do" }, method =  RequestMethod.GET)
 	@RequestMapping(value = "/member/*Form.do", method =  RequestMethod.GET)
@@ -222,6 +247,8 @@ public class MemberControllerImpl   implements MemberController {
 			ModelAndView mav = new ModelAndView("redirect:/member/listMembers.do");
 			return mav;
 		}
+
+		
 
 
 }

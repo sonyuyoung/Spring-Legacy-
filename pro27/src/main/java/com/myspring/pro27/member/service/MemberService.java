@@ -12,10 +12,12 @@ public interface MemberService {
 		 public MemberVO getOneMember(String id) throws DataAccessException;
 		 // 추가. updateMember
 		 public int updateMember(MemberVO membeVO) throws DataAccessException;
+		
 		 //
 		 public List listMembers() throws DataAccessException;
 		 public int addMember(MemberVO membeVO) throws DataAccessException;
 		 public int removeMember(String id) throws DataAccessException;
-	 // 잠시 두고 작업.
 	 public MemberVO login(MemberVO memberVO) throws Exception;
+//	 public MemberVO viewDetail(MemberVO memberVO) throws Exception;
+
 }

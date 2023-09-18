@@ -20,12 +20,13 @@ public interface MemberController {
 		// 수정하는 로직 추가. -> 애너테이션 기법으로 교체 작업
 		public ModelAndView updateMember(@ModelAttribute("memberVO") MemberVO memberVO, HttpServletRequest request, HttpServletResponse response) throws Exception;
 		
+		
 		public ModelAndView listMembers(HttpServletRequest request, HttpServletResponse response) throws Exception;
 		// pro26 그대로 재사용.
 		public ModelAndView addMember(@ModelAttribute("info") MemberVO memberVO,HttpServletRequest request, HttpServletResponse response) throws Exception;
 		public ModelAndView removeMember(@RequestParam("id") String id, HttpServletRequest request, HttpServletResponse response) throws Exception;
-	public ModelAndView login(@ModelAttribute("member") MemberVO member,
-                              RedirectAttributes rAttr,
-                              HttpServletRequest request, HttpServletResponse response) throws Exception;
+		public ModelAndView login(@ModelAttribute("member") MemberVO member,RedirectAttributes rAttr,HttpServletRequest request, HttpServletResponse response) throws Exception;
+//		public ModelAndView viewDetail(@ModelAttribute("member") MemberVO member,HttpServletRequest request, HttpServletResponse response) throws Exception;
 	public ModelAndView logout(HttpServletRequest request, HttpServletResponse response) throws Exception;
 }
+

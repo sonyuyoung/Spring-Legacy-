@@ -16,7 +16,7 @@ import net.coobird.thumbnailator.Thumbnails;
 
 @Controller
 public class FileDownloadController {
-	private static String CURR_IMAGE_REPO_PATH = "c:\\spring\\image_repo";
+	private static String CURR_IMAGE_REPO_PATH = "/Users/u020/upload/";
 	
 	@RequestMapping("/download")
 	protected void download(@RequestParam("imageFileName") String imageFileName,

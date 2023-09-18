@@ -12,6 +12,15 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 가입창</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+ <script>
+var cnt=1;
+function fn_addFile(){
+	$("#d_file").append("<br>"+"<input  type='file' name='file"+cnt+"' />");
+	cnt++;
+}
+</script> 
+
 <style>
    .text_center{
      text-align:center;
@@ -19,9 +28,18 @@
 </style>
 </head>
 <body>
-	<form method="post"   action="${contextPath}/member/addMember.do">
+
+
+	<form method="post"   action="${contextPath}/member/addMember.do" enctype="multipart/form-data">
 	<h1  class="text_center">회원 가입창</h1>
 	<table  align="center">
+	   <tr>
+	     <td width="200"><p align="right">프로필사진</td>
+  			<td><input type="file"  value="파일추가" name="imageFileName" onClick="fn_addFile()"/><br>
+			<div id="d_file"></div></td>
+	  
+	   </tr>
+		     
 	   <tr>
 	      <td width="200"><p align="right">아이디</td>
 	      <td width="400"><input type="text" name="id"></td>

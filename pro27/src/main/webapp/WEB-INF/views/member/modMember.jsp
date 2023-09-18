@@ -23,7 +23,20 @@
 	<form method="post"   action="${contextPath}/member/updateMember.do">
 	<h1  class="text_center">회원 정보 수정창</h1>
 	<table  align="center">
+	  
 	   <tr>
+	     <td width="200"><p align="right">프로필사진</td>
+	    	<td><input type="file"  value="파일추가" name="imageFileName"/><br>
+			<div id="d_file"></div></td>
+	     <div id="d_file"></div>
+  		<td width="400"><!--  <input type="file" name="imageFileName"onClick="fn_addFile()"> -->
+	  
+	   </tr>
+
+	   
+	   <tr>
+	   
+	   
 	      <td width="200"><p align="right">아이디</td>
 	      <td width="400"><input type="text" name="id" value=${user_id} readOnly></td>
 	   </tr>

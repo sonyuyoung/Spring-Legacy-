@@ -55,4 +55,13 @@ public class MemberServiceImpl implements MemberService {
 		   return memberDAO.updateMember(memberVO);
 		}
 
+//	@Override
+//	public MemberVO viewDetail(MemberVO memberVO) throws Exception {
+//		return memberDAO.viewDetail(memberVO);
+//	}
+//
+
+
+
+
 }

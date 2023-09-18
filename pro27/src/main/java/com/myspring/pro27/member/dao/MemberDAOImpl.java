@@ -59,4 +59,11 @@ public class MemberDAOImpl implements MemberDAO {
 				return result;
 			}
 
+//			@Override
+//			public MemberVO viewDetail(MemberVO memberVO) throws DataAccessException {
+//				 MemberVO membervo = null;
+//				 membervo = (MemberVO) sqlSession.selectOne("mapper.member.selectMemberById",memberVO);
+//				return membervo;
+//			}
+
 }

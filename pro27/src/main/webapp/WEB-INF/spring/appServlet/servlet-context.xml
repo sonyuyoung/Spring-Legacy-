@@ -49,14 +49,15 @@
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles2.TilesView" />
 	</beans:bean>
-
+	
+	
 <!-- 인터셉터 실습 설정 -->
   
     <!-- 인터셉터가 적용이되는 범위는, pro27 전체 패키지이고
     인터셉터가 동작하는 구체적인 클래스
     com.myspring.pro27.member.interceptor.ViewNameInterceptor --> 
    <mvc:interceptors>
-    	<mvc:interceptor>
+    	<mvc:interceptor> 
 	      <mvc:mapping path="/*/*.do"/>
 	   <beans:bean class="com.myspring.pro27.member.interceptor.ViewNameInterceptor" />
 	</mvc:interceptor>

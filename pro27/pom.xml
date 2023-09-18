@@ -173,6 +173,25 @@
 			<version>2.2.2</version>
 			</dependency>
 			
+			<!-- 다중 파일 업로드  -->
+		<dependency>
+		   <groupId>commons-fileupload</groupId>
+		   <artifactId>commons-fileupload</artifactId>
+		   <version>1.2.1</version>
+	 	</dependency>
+	
+		<dependency>
+		   <groupId>commons-io</groupId>
+		   <artifactId>commons-io</artifactId>
+		   <version>1.4</version>
+		</dependency>  
+		<!-- 썸네일 이미지 -->
+		<dependency>
+			<groupId>net.coobird</groupId> 
+			<artifactId>thumbnailator</artifactId> 
+			<version>0.4.8</version> 
+		</dependency>
+			
 		<!-- AOP -->
 		<dependency>
 		  <groupId>org.springframework</groupId>

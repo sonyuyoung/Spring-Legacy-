@@ -22,8 +22,8 @@
 	웹 브라우저에 이미지를 출력하는 결과 -->
 	예) 1.jpg , 2.jpg , 3.jpg
 	  <c:forEach var="imageFileName" items="${ map.fileList}"  >
-	         <%-- <img src="${pageContext.request.contextPath }/download?imageFileName=${imageFileName }" style="width:150px"> --%>
-	         <img src="${pageContext.request.contextPath }/download?imageFileName=${imageFileName }">
+	       <img src="${pageContext.request.contextPath }/download?imageFileName=${imageFileName }" style="width:150px"> 
+	<%--          <img src="${pageContext.request.contextPath }/download?imageFileName=${imageFileName }"> --%>
 	         <br><br><br>
 	  </c:forEach>         
 	</div><p> 
